@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=14 format=3 uid="uid://4ea2l1pq503r"]
+
+[ext_resource type="Script" path="res://resources/inventory/inventory_resource.gd" id="1_tevll"]
+[ext_resource type="Script" path="res://resources/inventory/slot_resource.gd" id="2_ee46a"]
+[ext_resource type="Resource" uid="uid://dhc2qpqp6nmio" path="res://resources/items/tools/hoe.tres" id="3_u0iea"]
+[ext_resource type="Resource" uid="uid://drfpo28c47ksq" path="res://resources/items/tools/watering_can.tres" id="4_cmcic"]
+[ext_resource type="Resource" uid="uid://crxwelot01181" path="res://resources/items/crops/strawberry_seeds.tres" id="5_ttqqn"]
+
+[sub_resource type="Resource" id="Resource_v8rhu"]
+script = ExtResource("2_ee46a")
+item = ExtResource("3_u0iea")
+quantity = 1
+max_quantity = 1
+is_selected = true
+index = 0
+
+[sub_resource type="Resource" id="Resource_8thqh"]
+script = ExtResource("2_ee46a")
+item = ExtResource("4_cmcic")
+quantity = 1
+max_quantity = 1
+is_selected = false
+index = 1
+
+[sub_resource type="Resource" id="Resource_ru3hx"]
+script = ExtResource("2_ee46a")
+item = ExtResource("5_ttqqn")
+quantity = 5
+max_quantity = 999
+is_selected = false
+index = 2
+
+[sub_resource type="Resource" id="Resource_cdcwa"]
+script = ExtResource("2_ee46a")
+quantity = 0
+max_quantity = 999
+is_selected = false
+index = 3
+
+[sub_resource type="Resource" id="Resource_rn7ga"]
+script = ExtResource("2_ee46a")
+quantity = 0
+max_quantity = 999
+is_selected = false
+index = 4
+
+[sub_resource type="Resource" id="Resource_hei8w"]
+script = ExtResource("2_ee46a")
+quantity = 0
+max_quantity = 999
+is_selected = false
+index = 5
+
+[sub_resource type="Resource" id="Resource_7iawf"]
+script = ExtResource("2_ee46a")
+quantity = 0
+max_quantity = 999
+is_selected = false
+index = 6
+
+[sub_resource type="Resource" id="Resource_e3m7t"]
+script = ExtResource("2_ee46a")
+quantity = 0
+max_quantity = 999
+is_selected = false
+index = 7
+
+[resource]
+resource_name = "Default"
+script = ExtResource("1_tevll")
+slots = Array[ExtResource("2_ee46a")]([SubResource("Resource_v8rhu"), SubResource("Resource_8thqh"), SubResource("Resource_ru3hx"), SubResource("Resource_cdcwa"), SubResource("Resource_rn7ga"), SubResource("Resource_hei8w"), SubResource("Resource_7iawf"), SubResource("Resource_e3m7t")])

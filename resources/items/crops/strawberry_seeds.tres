@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://crxwelot01181"]
+
+[ext_resource type="Script" path="res://resources/inventory/item_resource.gd" id="1_owyxs"]
+[ext_resource type="Texture2D" uid="uid://0ce4w8goa3vs" path="res://assets/crops/spring/strawberry/strawberry_1.png" id="2_mhh4r"]
+
+[resource]
+script = ExtResource("1_owyxs")
+name = "strawberry seeds"
+texture = ExtResource("2_mhh4r")
+is_tool = false
+tool_number = 0

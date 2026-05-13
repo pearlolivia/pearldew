@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b3julaljjj3ap"]
+
+[ext_resource type="Script" path="res://resources/inventory/item_resource.gd" id="1_lsjh1"]
+[ext_resource type="Texture2D" uid="uid://svkgo344r43f" path="res://assets/crops/spring/broccoli/broccoli_1.png" id="2_qxtt5"]
+
+[resource]
+script = ExtResource("1_lsjh1")
+name = "broccoli seeds"
+texture = ExtResource("2_qxtt5")
+is_tool = false
+tool_number = 0

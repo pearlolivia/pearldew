@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8cq7s5jd6v2x"]
+
+[ext_resource type="Script" path="res://scripts/inventory_slot.gd" id="1_e6yam"]
+[ext_resource type="Texture2D" uid="uid://bwimnopjrmx57" path="res://assets/ui/slot.png" id="2_8wskv"]
+[ext_resource type="Texture2D" uid="uid://b3wo66s6hnolo" path="res://assets/ui/slot_selected.png" id="2_nhwcv"]
+[ext_resource type="Texture2D" uid="uid://fciojdaa1x3e" path="res://assets/crops/spring/strawberry/strawberry.png" id="3_3u6ss"]
+[ext_resource type="FontFile" uid="uid://c2q10ywk1lalg" path="res://assets/fonts/Game-Font.ttf" id="4_fpbcg"]
+
+[node name="Slot" type="NinePatchRect"]
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_e6yam")
+
+[node name="isSelected" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(18.5, 20)
+scale = Vector2(0.0872675, 0.0886981)
+texture = ExtResource("2_nhwcv")
+
+[node name="Container" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = -14.0
+offset_top = -12.0
+offset_right = 50.0
+offset_bottom = 52.0
+texture = ExtResource("2_8wskv")
+
+[node name="Index" type="Label" parent="Container"]
+visible = false
+layout_mode = 0
+offset_left = 29.0
+offset_top = 24.0
+offset_right = 41.0
+offset_bottom = 47.0
+scale = Vector2(0.5, 0.5)
+text = "0"
+
+[node name="Item" type="Sprite2D" parent="Container"]
+position = Vector2(32, 28)
+scale = Vector2(1.84375, 1.8125)
+texture = ExtResource("3_3u6ss")
+
+[node name="Quantity" type="Label" parent="Container"]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+offset_left = 28.0
+offset_top = 32.0
+offset_right = 43.0
+offset_bottom = 42.0
+theme_type_variation = &"TooltipLabel"
+theme_override_fonts/font = ExtResource("4_fpbcg")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="gui_input" from="Container" to="." method="_on_container_gui_input"]
