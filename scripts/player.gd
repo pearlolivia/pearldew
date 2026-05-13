@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 100
+const SPEED = 70
 var input_dir: Vector2
 var lastDirection = 'down'
 var isToolPlaying = false
