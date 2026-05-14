@@ -7,6 +7,8 @@ extends NinePatchRect
 @onready var Index: Label = $Container/Index
 @onready var inventory: Inventory = preload("res://resources/inventory/default.tres")
 
+@export var is_main := true
+
 var items: Array[Item]
 # TO DO: add items as created
 var _crops_dir := DirAccess.open("res://resources/items/crops/")
@@ -18,7 +20,9 @@ func _init() -> void:
 			var _item := ResourceLoader.load(_crops_dir.get_current_dir() + "/" + _file)
 			items.push_back(_item)
 
-#func _ready() -> void:
+func _ready() -> void:
+	if (is_main == false):
+		$isSelected.visible = false
 
 func update(slot: Slot):
 	if !slot.item:
@@ -40,10 +44,6 @@ func update(slot: Slot):
 	
 	Index.text = str(slot.index)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _on_container_gui_input(event: InputEvent) -> void:
-	if (event is InputEventMouseButton and event.pressed):
+	if (event is InputEventMouseButton and event.pressed and is_main):
 		inventory.set_selected(int(self.Index.text))

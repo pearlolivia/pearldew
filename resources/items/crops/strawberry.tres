@@ -7,3 +7,6 @@
 script = ExtResource("1_yd2ey")
 name = "strawberry"
 texture = ExtResource("2_i3prt")
+is_tool = false
+tool_number = 0
+value = 50

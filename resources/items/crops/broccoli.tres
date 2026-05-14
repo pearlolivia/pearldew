@@ -7,3 +7,6 @@
 script = ExtResource("1_sbvwc")
 name = "Broccoli"
 texture = ExtResource("2_qowy8")
+is_tool = false
+tool_number = 0
+value = 24

@@ -7453,7 +7453,7 @@ tile_set = SubResource("TileSet_mj82i")
 [node name="Crops" type="Node2D" parent="."]
 
 [node name="ShippingBin" parent="." instance=ExtResource("15_l344w")]
-position = Vector2(5, -84)
+position = Vector2(135, -89)
 
 [node name="Player" parent="." instance=ExtResource("1_18axv")]
 position = Vector2(52, -64)
